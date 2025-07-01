@@ -115,18 +115,18 @@ source $ZSH/oh-my-zsh.sh
 export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/terraform terraform
+complete -o nospace -C /Users/taniaijunya/.local/share/aquaproj-aqua/bin/terraform terraform
 
 # aqua
-export AQUA_LOG_COLOR=always 
+export AQUA_LOG_COLOR=always
 export AQUA_PROGRESS_BAR=true
 export AQUA_GLOBAL_CONFIG=${XDG_CONFIG_HOME:-$HOME/.config}/aqua/aqua.yaml
 alias aq='aqua'
-alias aqcd="cd ${XDG_CONFIG_HOME:-$HOME/.config}/aqua/"
+alias aqcd='cd ${XDG_CONFIG_HOME:-$HOME/.config}/aqua/'
 alias aqgi='aqua generate -i -o $AQUA_GLOBAL_CONFIG'
-alias aqia='aqua install --all'
+alias aqia='aqua install --all -c $AQUA_GLOBAL_CONFIG'
 alias aqli='aqua list --installed --all | sort'
-alias aqup='aqua update'
+alias aqup='aqua update -c $AQUA_GLOBAL_CONFIG'
 
 # peco
 function peco-src () {
