@@ -1,0 +1,28 @@
+[aws]
+symbol = "☁️ "
+
+[cmd_duration]
+min_time = 1_000
+show_milliseconds = true
+
+[directory]
+truncation_length = 8
+
+[docker_context]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[terraform]
+disabled = true
+
+[kubernetes]
+disabled = false
+symbol = "☸ "
