@@ -8,6 +8,9 @@ brew install aqua
 brew install awscli
 brew install tree
 brew install wget
+brew install node
+
+npm install -g git-cz
 
 if [ -e ~/.zshrc ]; then
     cp ~/.zshrc ~/.zshrc.bak
