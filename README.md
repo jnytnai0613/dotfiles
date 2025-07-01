@@ -5,6 +5,7 @@ $ task dg
 
 #### 新環境へファイル配置
 ```zsh
+$ . ./setup.zsh
 $ . ./install.zsh
 ```
 
