@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-mkdir ~/.config
+#mkdir ~/.config
 ln -sf $(pwd)/.zshrc ~/.zshrc
-ln -s $(pwd)/.config/starship.toml ~/.config/starship.toml
-ln -s $(pwd)/.config/aqua.yaml ~/.config/aqua.yaml
-ln -s $(pwd)/changelog.config.js ~/changelog.config.js
+ln -sf $(pwd)/.config/starship.toml ~/.config/starship.toml
+ln -sf $(pwd)/.config/aqua.yaml ~/.config/aqua.yaml
+ln -sf $(pwd)/changelog.config.js ~/changelog.config.js
