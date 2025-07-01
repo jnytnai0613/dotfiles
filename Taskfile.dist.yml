@@ -1,0 +1,111 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+# https://taskfile.dev/
+
+version: "3"
+
+vars:
+  # 一連の処理のエラーを捕捉（_gitで使用する）
+  # 以前は defer で task に vars が渡せていたが、v3.39.0 あたりでエラーになって以降
+  # 修正されておらず、グローバルに切り出して対応することにした
+  ON_ERROR: /tmp/on_error_dotfiles
+
+tasks:
+  default:
+    cmd: task --list --sort alphanumeric
+    silent: true
+
+  util:list:
+    # desc: view all tasks
+    summary: |
+      全タスクの出力
+    aliases:
+      - ul
+      - ls
+    cmd: task --list-all --sort alphanumeric
+    silent: true
+
+  util:summary:
+    # desc: view summary of all tasks
+    summary: |
+      全タスクのサマリー出力
+    aliases:
+      - us
+      - la
+    cmd: task --list-all --sort alphanumeric -j | jq -cr ".tasks[].name" | xargs -i sh -c 'task --summary {}; echo "\n---\n"'
+    silent: true
+
+  dotfiles:git:
+    desc: auto git, use -- COMMIT TITLE
+    summary: |
+      dotfileの更新結果を自動で登録
+      task dg -- コミットタイトル（の一部）
+      例: task dg -- ".zshrcへエイリアス追加"
+    aliases:
+      - dg
+    cmds:
+      - task: _git
+        vars:
+          TITLE:
+            # GNU版とBSD版でdate -Iの挙動が異なるので、共通の書式とする
+            # GNU版: date -I date
+            # BSD版: date -I
+            sh: echo "bump:" "dotfiles update at $(date +"%Y-%m-%d")" {{.CLI_ARGS}}"
+          BRANCH:
+            sh: echo "bump/dotfiles_up/$(date +"%Y-%m-%d")"
+
+  _git:
+    summary: git automation
+    requires:
+      vars:
+        - TITLE
+        - BRANCH
+        - TARGET
+    cmds:
+      - defer: { task: _git:on_error }
+      - touch {{.ON_ERROR}}
+      - task: _git:auto
+        vars:
+          TITLE: "{{.TITLE}}"
+          BRANCH: "{{.BRANCH}}"
+          TARGET: "{{.TARGET}}"
+      - task: _git:gh
+        vars:
+          TITLE: "{{.TITLE}}"
+          BRANCH: "{{.BRANCH}}"
+      - rm {{.ON_ERROR}}
+
+  _git:auto:
+    summary: |
+      git add, commit, push までを自動化
+    cmds:
+      - git fetch --prune --all
+      - git checkout origin/HEAD
+      - git add .
+      - git commit -m"{{.TITLE}}"
+      - git push origin HEAD:refs/heads/{{.BRANCH}} -f
+
+  _git:gh:
+    summary: |
+      - GitHub CLI を使用して PR を作成し、オートマージを設定する
+      - push 前までと分離しているのは、エラー時の処理が異なるため
+        - push 前までのエラーは reset して処理前に戻す
+        - push 後のエラーは push を再処理する（ON_ERROR のファイルに保存）
+      - PAT の権限がちゃんとしてないとエラーになることに注意
+      - オートマージの設定もリポジトリ側に必要
+    cmds:
+      - gh pr create -t "{{.TITLE}}" -b "" -l "" -H "{{.BRANCH}}" -B "main"
+      - sleep 1
+      - gh pr merge "{{.BRANCH}}" --auto -s
+      - git switch main
+      - git pull origin main
+
+  _git:on_error:
+    internal: true
+    silent: true
+    status:
+      - test ! -e {{.ON_ERROR}}
+        # エラーファイルが存在したら処理する
+    cmds:
+      - defer: rm {{.ON_ERROR}}
+      - cmd: git reset --mixed origin/HEAD
+        ignore_error: true
