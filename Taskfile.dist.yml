@@ -40,7 +40,6 @@ tasks:
       dotfileの更新結果を自動で登録
       task dg -- コミットタイトル（の一部）
       例: task dg -- ".zshrcへエイリアス追加"
-      test11111
     aliases:
       - dg
     cmds:
