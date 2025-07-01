@@ -40,6 +40,7 @@ tasks:
       dotfileの更新結果を自動で登録
       task dg -- コミットタイトル（の一部）
       例: task dg -- ".zshrcへエイリアス追加"
+      test
     aliases:
       - dg
     cmds:
@@ -49,7 +50,7 @@ tasks:
             # GNU版とBSD版でdate -Iの挙動が異なるので、共通の書式とする
             # GNU版: date -I date
             # BSD版: date -I
-            sh: echo "bump:" "dotfiles update at $(date +"%Y-%m-%d")" {{.CLI_ARGS}}"
+            sh: echo "bump:" "dotfiles update at $(date +"%Y-%m-%d")" {{.CLI_ARGS}}
           BRANCH:
             sh: echo "bump/dotfiles_up/$(date +"%Y-%m-%d")"
 
@@ -59,7 +60,6 @@ tasks:
       vars:
         - TITLE
         - BRANCH
-        - TARGET
     cmds:
       - defer: { task: _git:on_error }
       - touch {{.ON_ERROR}}
@@ -67,13 +67,11 @@ tasks:
         vars:
           TITLE: "{{.TITLE}}"
           BRANCH: "{{.BRANCH}}"
-          TARGET: "{{.TARGET}}"
       - task: _git:gh
         vars:
           TITLE: "{{.TITLE}}"
           BRANCH: "{{.BRANCH}}"
       - rm {{.ON_ERROR}}
-
   _git:auto:
     summary: |
       git add, commit, push までを自動化
