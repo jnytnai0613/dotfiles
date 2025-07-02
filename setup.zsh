@@ -4,11 +4,7 @@ if ! which brew; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-brew install aqua
-brew install awscli
-brew install tree
-brew install wget
-brew install node
+brew bundle --global --file=~/.Brewfile
 
 npm install -g git-cz
 
