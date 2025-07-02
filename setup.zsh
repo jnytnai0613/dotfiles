@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-brew bundle --global --file=~/.Brewfile
+brew bundle --global --file=$(pwd)/.Brewfile
 npm install -g git-cz
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
