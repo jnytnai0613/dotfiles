@@ -31,7 +31,7 @@ tasks:
     aliases:
       - us
       - la
-    cmd: task --list-all --sort alphanumeric -j | jq -cr ".tasks[].name" | xargs -i sh -c 'task --summary {}; echo "\n---\n"'
+    cmd: task --list-all --sort alphanumeric -j | jq -cr ".tasks[].name" | xargs -I {} sh -c 'task --summary {}; echo "\n---\n"'
     silent: true
 
   dotfiles:git:
