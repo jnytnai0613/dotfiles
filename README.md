@@ -15,7 +15,7 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 $ . ./setup.zsh
 
 # ファイル配置
-$ . ./install.zsh
+$ . ./link.zsh
 ```
 
 #### 各種エイリアス
