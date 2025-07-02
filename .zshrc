@@ -146,4 +146,9 @@ compdef kubecolor=kubectl
 compdef k=kubectl
 alias k='kubecolor'
 
+# Task
+alias tg='task dg -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
+alias tl='task ls -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
+
+
 eval "$(starship init zsh)"
