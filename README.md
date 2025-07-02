@@ -8,6 +8,7 @@ $ tg -- タイトル
 ```zsh
 # Homebrewインストール
 # インストール結果にPATHを通すコマンドが出力されるので、これも実行
+# https://brew.sh/
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # 各種ソフトウエアインストール
