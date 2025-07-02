@@ -34,6 +34,15 @@ tasks:
     cmd: task --list-all --sort alphanumeric -j | jq -cr ".tasks[].name" | xargs -I {} sh -c 'task --summary {}; echo "\n---\n"'
     silent: true
 
+  util:bundle:
+    # desc: brew bundle dump
+    summary: |
+      Brewfileの出力
+    aliases:
+      - bd
+    cmd: brew bundle dump --global -f
+    silent: true
+
   dotfiles:git:
     desc: auto git, use -- COMMIT TITLE
     summary: |
