@@ -33,14 +33,6 @@ tasks:
       - la
     cmd: task --list-all --sort alphanumeric -j | jq -cr ".tasks[].name" | xargs -i sh -c 'task --summary {}; echo "\n---\n"'
     silent: true
-  util:test:
-    # desc: view summary of all tasks
-    summary: |
-      全タスクのサマリー出力
-    aliases:
-      - ts
-    cmd: pwd
-    silent: true
 
   dotfiles:git:
     desc: auto git, use -- COMMIT TITLE
