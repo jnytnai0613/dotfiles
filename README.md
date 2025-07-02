@@ -13,6 +13,7 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 
 # 各種ソフトウエアインストール
 $ . ./setup.zsh
+
 # ファイル配置
 $ . ./install.zsh
 ```
