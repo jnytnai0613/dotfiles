@@ -1,6 +1,7 @@
 ### ファイル更新後、GitHubへのUpload
 ```zsh
-$ task dg
+# task dg
+$ tg
 ```
 
 #### 新環境で実行
@@ -25,7 +26,7 @@ $ alias aqup='aqua update -c $AQUA_GLOBAL_CONFIG'
 $ alias k='kubecolor'
 
 # Task
-alias tg='task dg -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
-alias tl='task ls -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
-alias tb='task bd -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
+$ alias tg='task dg -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
+$ alias tl='task ls -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
+$ alias tb='task bd -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
 ```
