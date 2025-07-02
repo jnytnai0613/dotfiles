@@ -1,7 +1,7 @@
 ### ファイル更新後、GitHubへのUpload
 ```zsh
-# task dg
-$ tg
+# task dg -- タイトル
+$ tg -- タイトル
 ```
 
 #### 新環境で実行
