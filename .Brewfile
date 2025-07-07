@@ -1,5 +1,6 @@
 brew "aqua"
 brew "awscli"
+brew "git"
 brew "node"
 brew "nodebrew"
 brew "tree"
