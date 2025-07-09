@@ -40,7 +40,7 @@ tasks:
       Brewfileの出力
     aliases:
       - bd
-    cmd: brew bundle dump --global -f
+    cmd: brew bundle dump --global -f --file=~/.config/brew/brewfile
     silent: true
 
   dotfiles:git:

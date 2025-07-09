@@ -16,6 +16,16 @@ $ . ./setup.zsh
 
 # ファイル配置
 $ . ./link.zsh
+
+# aquaにてパッケージインストール
+$ aqgi
+
+# krew初期設定
+$ krew install krew
+$ k krew list
+
+# kubectlプラグインインストール
+$ krewfile -file ~/.config/krew/krewfile
 ```
 
 #### 各種エイリアス
