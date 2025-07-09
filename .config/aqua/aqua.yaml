@@ -24,3 +24,4 @@ packages:
 - name: 1password/cli@v2.31.1
 - name: helm/helm@v3.18.3
 - name: starship/starship@v1.23.0
+- name: kubernetes-sigs/krew@v0.4.5
