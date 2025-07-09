@@ -26,6 +26,9 @@ $ k krew list
 
 # kubectlプラグインインストール
 $ krewfile -file ~/.config/krew/krewfile
+
+# ghqのルート設定
+$ git config --global ghq.root '~/src'
 ```
 
 #### 各種エイリアス
