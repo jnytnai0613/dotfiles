@@ -149,6 +149,8 @@ source <(kubectl completion zsh)
 compdef kubecolor=kubectl
 compdef k=kubectl
 alias k='kubecolor'
+alias kc='kubectx | peco | xargs kubectx'
+alias kn='kubens | peco | xargs kubens'
 
 # Task
 alias tg='task dg -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
