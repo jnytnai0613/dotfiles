@@ -114,7 +114,7 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"
 
-# この前に”~/.local/share/aquaproj-aqua/bin/krew install krew"を実行する
+# この前に”krew install krew"を実行する
 # すると、~/.krew/bin/kubectl-krew が配置される
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
