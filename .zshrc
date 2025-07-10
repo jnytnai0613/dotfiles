@@ -157,11 +157,18 @@ alias tg='task dg -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
 alias tl='task ls -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
 alias tb='task bd -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
 
-# これはテスト運用
-# パフォーマンス悪ければ戻す
 function update_kube_context() {
-  export KUBE_CONTEXT_SHORT=$(kubectl config current-context 2>/dev/null | sed 's|.*/||')
-  export KUBE_CURRENT_NS=$(kubectl config view --minify --output 'jsonpath={..namespace}' 2>/dev/null)
+  local cache_file="/tmp/kube_context_cache"
+  local ttl=3  # 秒
+
+  if [[ -f "$cache_file" ]] && [[ $(($(date +%s) - $(stat -f "%m" "$cache_file"))) -lt $ttl ]]; then
+    source "$cache_file"
+  else
+    export KUBE_CONTEXT_SHORT=$(kubectl config current-context 2>/dev/null | sed 's|.*/||')
+    export KUBE_CURRENT_NS=$(kubectl config view --minify --output 'jsonpath={..namespace}' 2>/dev/null)
+    echo "export KUBE_CONTEXT_SHORT=$KUBE_CONTEXT_SHORT" > "$cache_file"
+    echo "export KUBE_CURRENT_NS=$KUBE_CURRENT_NS" >> "$cache_file"
+  fi
 }
 autoload -U add-zsh-hook
 add-zsh-hook precmd update_kube_context
