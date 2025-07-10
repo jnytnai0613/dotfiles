@@ -1,5 +1,17 @@
+format = """
+$custom\
+$aws\
+$directory\
+$git_branch\
+$docker_context\
+$cmd_duration\
+$character
+"""
+
 [aws]
-symbol = "☁️ "
+symbol = "☁️"
+format = "@ [$symbol ($region)]($style) "
+style = "bold yellow"
 
 [cmd_duration]
 min_time = 1_000
@@ -23,6 +35,8 @@ disabled = true
 [terraform]
 disabled = true
 
-[kubernetes]
-disabled = false
-symbol = "☸ "
+[custom.k8s_cluster]
+command = 'echo "$KUBE_CONTEXT_SHORT"'
+when = 'test -n "$KUBE_CONTEXT_SHORT"'
+format = '[☸ $output]($style) '
+style = 'bold blue'
