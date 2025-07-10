@@ -43,9 +43,18 @@ $ alias aqup='aqua update -c $AQUA_GLOBAL_CONFIG'
 
 # Kubernetes
 $ alias k='kubecolor'
+# contextのインタラクティブな選択
+$ alias kc='kubecolor ctx | peco | xargs kubecolor ctx'
+# namespeceのインタラクティブな選択
+$ alias kn='kubecolor ns | peco | xargs kubecolor ns'
 
 # Task
+# GitHubへのPush & Auto Merger
 $ alias tg='task dg -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
+# Taskのリスト
 $ alias tl='task ls -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
+# Brewのdump
 $ alias tb='task bd -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
+# krewのdump
+$ alias tk='task bd -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
 ```
