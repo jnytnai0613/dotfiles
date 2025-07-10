@@ -41,8 +41,8 @@ when = 'test -n "$KUBE_CONTEXT_SHORT"'
 format = '[☸ $output]($style) '
 style = 'bold blue'
 
-# 上記customはテスト運用
-# パフォーマンス悪ければ戻す
+# 上記でパフォーマンス気になれば戻す
+# ファイル上部のformatの $custom も $kubernetes にする
 #[kubernetes]
 #symbol = "☸ "
 #format = '[$symbol$context( \($namespace\))]($style) '
