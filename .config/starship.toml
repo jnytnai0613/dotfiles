@@ -10,7 +10,7 @@ $character
 
 [aws]
 symbol = "☁️"
-format = "@ [$symbol ($region)]($style) "
+format = '@ [$symbol \($region\)]($style) '
 style = "bold yellow"
 
 [cmd_duration]
@@ -36,7 +36,14 @@ disabled = true
 disabled = true
 
 [custom.k8s_cluster]
-command = 'echo "$KUBE_CONTEXT_SHORT"'
+command = 'echo $(echo $KUBE_CONTEXT_SHORT) \($(echo $KUBE_CURRENT_NS)\)'
 when = 'test -n "$KUBE_CONTEXT_SHORT"'
 format = '[☸ $output]($style) '
 style = 'bold blue'
+
+# 上記customはテスト運用
+# パフォーマンス悪ければ戻す
+#[kubernetes]
+#symbol = "☸ "
+#format = '[$symbol$context( \($namespace\))]($style) '
+#disabled = false

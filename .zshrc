@@ -159,6 +159,7 @@ alias tb='task bd -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
 
 function update_kube_context() {
   export KUBE_CONTEXT_SHORT=$(kubectl config current-context 2>/dev/null | sed 's|.*/||')
+  export KUBE_CURRENT_NS=$(kubectl config view --minify --output 'jsonpath={..namespace}' 2>/dev/null)
 }
 autoload -U add-zsh-hook
 add-zsh-hook precmd update_kube_context
