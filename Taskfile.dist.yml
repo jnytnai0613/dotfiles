@@ -34,13 +34,22 @@ tasks:
     cmd: task --list-all --sort alphanumeric -j | jq -cr ".tasks[].name" | xargs -I {} sh -c 'task --summary {}; echo "\n---\n"'
     silent: true
 
-  util:bundle:
+  util:brewbundle:
     # desc: brew bundle dump
     summary: |
       Brewfileの出力
     aliases:
       - bd
-    cmd: brew bundle dump --global -f --file=~/.config/brew/brewfile
+    cmd: brew bundle dump -f --file=~/.config/brew/brewfile
+    silent: true
+
+  util:krewbundle:
+    # desc: krew dump
+    summary: |
+      krewfileの出力
+    aliases:
+      - kd
+    cmd: kubectl krew list | awk '{print}' > ~/.config/krew/krewfile 
     silent: true
 
   dotfiles:git:

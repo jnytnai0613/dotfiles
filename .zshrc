@@ -156,6 +156,7 @@ alias kn='kubecolor ns | peco | xargs kubecolor ns'
 alias tg='task dg -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
 alias tl='task ls -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
 alias tb='task bd -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
+alias tk='task kd -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
 
 function update_kube_context() {
   local cache_file="/tmp/kube_context_cache"
