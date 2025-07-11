@@ -26,3 +26,4 @@ packages:
 - name: brumhard/krewfile@v0.6.3
 - name: derailed/k9s@v0.50.7
 - name: argoproj/argo-cd@v3.0.11
+- name: kubernetes-sigs/kustomize@kustomize/v5.7.0
