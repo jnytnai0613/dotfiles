@@ -56,5 +56,5 @@ $ alias tl='task ls -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
 # Brewのdump
 $ alias tb='task bd -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
 # krewのdump
-$ alias tk='task bd -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
+$ alias tk='task kd -t ~/src/github.com/jnytnai0613/dotfiles/Taskfile.dist.yml'
 ```
