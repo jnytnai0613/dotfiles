@@ -1,0 +1,29 @@
+{
+    "editor.inlayHints.enabled": "off",
+    "mermaid.preview.autoRefresh": true,
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#1073cf2d",
+        "editor.lineHighlightBorder": "#9fced11f"
+    },
+    "workbench.settings.useSplitJSON": true,
+    "editor.wordWrap": "off",
+    "diffEditor.wordWrap": "off",
+    "editor.guides.indentation": false,
+    "editor.guides.bracketPairs": false,
+    "azureTerraform.survey": {
+        "surveyPromptDate": "2025-08-10T01:13:54.535Z",
+        "surveyPromptIgnoredCount": 2
+    },
+    "redhat.telemetry.enabled": false,
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/.vscode": true,
+        "**/Thumbs.db": true
+    },
+    "files.insertFinalNewline": true,
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true
+}
