@@ -28,3 +28,5 @@ ln -sf $(pwd)/.config/krew/krewfile ~/.config/krew/krewfile
 ln -sf $(pwd)/changelog.config.js ~/changelog.config.js
 ln -sf $(pwd)/.aws/config ~/.aws/config
 ln -sf $(pwd)/.aws/credentials ~/.aws/credentials
+# リンク先ディレクトリは環境に合わせて、適宜変更するよう注意
+# ln -sf $(pwd)/vscode/setting.json /Users/"username"/Library/Application\ Support/Code/User/settings.json
