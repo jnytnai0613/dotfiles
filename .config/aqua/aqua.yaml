@@ -28,3 +28,4 @@ packages:
 - name: argoproj/argo-cd@v3.0.11
 - name: kubernetes-sigs/kustomize@kustomize/v5.7.0
 - name: pre-commit/pre-commit@v4.2.0
+- name: linkerd/linkerd2@edge-25.7.5
