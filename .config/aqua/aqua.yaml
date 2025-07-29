@@ -30,3 +30,4 @@ packages:
 - name: pre-commit/pre-commit@v4.2.0
 - name: linkerd/linkerd2@edge-25.7.5
 - name: smallstep/cli@v0.28.7
+- name: argoproj/argo-rollouts@v1.8.3
