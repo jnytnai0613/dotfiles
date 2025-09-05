@@ -1,0 +1,18 @@
+{
+    "servers": {
+        "terraform": {
+            "command": "docker",
+            "args": [
+                "run",
+                "-i",
+                "--rm",
+                "hashicorp/terraform-mcp-server"
+            ],
+            "type": "stdio"
+        },
+        "aws-knowledge-mcp-server": {
+            "url": "https://knowledge-mcp.global.api.aws"
+        }
+    },
+    "inputs": []
+}
