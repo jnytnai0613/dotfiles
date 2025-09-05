@@ -30,3 +30,4 @@ ln -sf $(pwd)/.aws/config ~/.aws/config
 ln -sf $(pwd)/.aws/credentials ~/.aws/credentials
 # リンク先ディレクトリは環境に合わせて、適宜変更するよう注意
 # ln -sf $(pwd)/vscode/setting.json /Users/"username"/Library/Application\ Support/Code/User/settings.json
+# ln -sf $(pwd)/vscode/mcp.json /Users/"username"/Library/Application\ Support/Code/User/mcp.json
