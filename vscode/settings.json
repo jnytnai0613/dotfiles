@@ -3,7 +3,9 @@
     "mermaid.preview.autoRefresh": true,
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#1073cf2d",
-        "editor.lineHighlightBorder": "#9fced11f"
+        "editor.lineHighlightBorder": "#9fced11f",
+        "editorGroup.border": "#ff0000",
+        "tab.activeBackground": "#666666cc"
     },
     "workbench.settings.useSplitJSON": true,
     "editor.wordWrap": "off",
