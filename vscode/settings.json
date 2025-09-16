@@ -28,5 +28,12 @@
     "files.insertFinalNewline": true,
     "files.autoSave": "afterDelay",
     "editor.formatOnSave": true,
-    "github.copilot.nextEditSuggestions.enabled": true
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "[yaml][yml][github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.formatOnSave": true
+    }
 }
