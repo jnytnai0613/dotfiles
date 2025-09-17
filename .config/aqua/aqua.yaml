@@ -9,7 +9,7 @@
 #   - all
 registries:
 - type: standard
-  ref: v4.411.0 # renovate: depName=aquaproj/aqua-registry
+  ref: v4.411.1 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: kubernetes/kubernetes/kubectl@v1.34.1
 - name: hashicorp/terraform@v1.13.2
@@ -18,7 +18,7 @@ packages:
 - name: x-motemen/ghq@v1.8.0
 - name: peco/peco@v0.5.11
 - name: kubecolor/kubecolor@v0.5.1
-- name: go-task/task@v3.44.1
+- name: go-task/task@v3.45.3
 - name: 1password/cli@v2.31.1
 - name: helm/helm@v3.19.0
 - name: starship/starship@v1.23.0
