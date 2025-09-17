@@ -35,5 +35,6 @@
         "editor.tabSize": 2,
         "editor.autoIndent": "advanced",
         "editor.formatOnSave": true
-    }
+    },
+    "githubLocalActions.dockerDesktopPath": "/Applications/Docker.app"
 }
