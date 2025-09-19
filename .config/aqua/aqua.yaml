@@ -9,7 +9,7 @@
 #   - all
 registries:
 - type: standard
-  ref: v4.411.1 # renovate: depName=aquaproj/aqua-registry
+  ref: v4.412.0 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: kubernetes/kubernetes/kubectl@v1.34.1
 - name: hashicorp/terraform@v1.13.3
@@ -24,11 +24,11 @@ packages:
 - name: starship/starship@v1.23.0
 - name: kubernetes-sigs/krew@v0.4.5
 - name: brumhard/krewfile@v0.6.3
-- name: derailed/k9s@v0.50.10
-- name: argoproj/argo-cd@v3.1.5
+- name: derailed/k9s@v0.50.11
+- name: argoproj/argo-cd@v3.1.6
 - name: kubernetes-sigs/kustomize@kustomize/v5.7.1
 - name: pre-commit/pre-commit@v4.3.0
-- name: linkerd/linkerd2@edge-25.9.2
+- name: linkerd/linkerd2@edge-25.9.3
 - name: smallstep/cli@v0.28.7
 - name: argoproj/argo-rollouts@v1.8.3
 - name: nektos/act@v0.2.81
