@@ -36,5 +36,6 @@
         "editor.autoIndent": "advanced",
         "editor.formatOnSave": true
     },
-    "githubLocalActions.dockerDesktopPath": "/Applications/Docker.app"
+    "githubLocalActions.dockerDesktopPath": "/Applications/Docker.app",
+    "git.autofetch": true
 }
