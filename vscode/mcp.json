@@ -22,6 +22,18 @@
                 "--rm",
                 "ghcr.io/microsoft/mcp-dotnet-samples/awesome-copilot:latest"
             ]
+        },
+        "awslabs.billing-cost-management-mcp-server": {
+            "command": "uvx",
+            "args": [
+                "awslabs.billing-cost-management-mcp-server@latest"
+            ],
+            "env": {
+                "FASTMCP_LOG_LEVEL": "ERROR",
+                "AWS_REGION": "ap-northeast-1"
+            },
+            "disabled": false,
+            "autoApprove": []
         }
     },
     "inputs": []
