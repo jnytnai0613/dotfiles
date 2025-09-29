@@ -30,6 +30,7 @@
             ],
             "env": {
                 "FASTMCP_LOG_LEVEL": "ERROR",
+                "AWS_PROFILE": "default",
                 "AWS_REGION": "ap-northeast-1"
             },
             "disabled": false,
