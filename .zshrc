@@ -175,3 +175,19 @@ autoload -U add-zsh-hook
 add-zsh-hook precmd update_kube_context
 
 eval "$(starship init zsh)"
+
+# brew
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+# rbenv
+eval "$(rbenv init - zsh)"
+FPATH=~/.rbenv/completions:"$FPATH"
+
+autoload -U compinit
+compinit
