@@ -180,14 +180,12 @@ eval "$(starship init zsh)"
 if type brew &>/dev/null
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
 fi
 
 # rbenv
+# 保管機能はinitに含まれているため、追加設定不要
 eval "$(rbenv init - zsh)"
-FPATH=~/.rbenv/completions:"$FPATH"
 
-autoload -U compinit
+# compinit を一度だけ実行
+autoload -Uz compinit
 compinit
