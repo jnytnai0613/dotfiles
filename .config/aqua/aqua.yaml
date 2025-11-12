@@ -18,9 +18,9 @@ packages:
 - name: x-motemen/ghq@v1.8.0
 - name: peco/peco@v0.5.11
 - name: kubecolor/kubecolor@v0.5.3
-- name: go-task/task@v3.45.4
+- name: go-task/task@v3.45.5
 - name: 1password/cli@v2.31.1
-- name: helm/helm@v3.19.0
+- name: helm/helm@v3.19.1
 - name: starship/starship@v1.24.0
 - name: kubernetes-sigs/krew@v0.4.5
 - name: brumhard/krewfile@v0.6.3
