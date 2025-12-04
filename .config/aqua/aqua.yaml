@@ -9,10 +9,10 @@
 #   - all
 registries:
 - type: standard
-  ref: v4.442.0 # renovate: depName=aquaproj/aqua-registry
+  ref: v4.443.0 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: kubernetes/kubernetes/kubectl@v1.34.2
-- name: hashicorp/terraform@v1.14.0
+- name: hashicorp/terraform@v1.14.1
 - name: cli/cli@v2.83.1
 - name: terraform-docs/terraform-docs@v0.20.0
 - name: x-motemen/ghq@v1.8.0
@@ -29,7 +29,7 @@ packages:
 - name: kubernetes-sigs/kustomize@kustomize/v5.8.0
 - name: pre-commit/pre-commit@v4.5.0
 - name: linkerd/linkerd2@edge-25.11.3
-- name: smallstep/cli@v0.28.7
+- name: smallstep/cli@v0.29.0
 - name: argoproj/argo-rollouts@v1.8.3
 - name: nektos/act@v0.2.83
-- name: astral-sh/uv@0.9.14
+- name: astral-sh/uv@0.9.15
