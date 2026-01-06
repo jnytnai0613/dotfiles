@@ -9,7 +9,7 @@
 #   - all
 registries:
 - type: standard
-  ref: v4.446.0 # renovate: depName=aquaproj/aqua-registry
+  ref: v4.451.1 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: kubernetes/kubernetes/kubectl@v1.35.0
 - name: hashicorp/terraform@v1.14.3
@@ -18,19 +18,19 @@ packages:
 - name: x-motemen/ghq@v1.8.0
 - name: peco/peco@v0.5.11
 - name: kubecolor/kubecolor@v0.5.3
-- name: go-task/task@v3.46.3
+- name: go-task/task@v3.46.4
 - name: 1password/cli@v2.31.1
 - name: helm/helm@v4.0.4
-- name: starship/starship@v1.24.1
+- name: starship/starship@v1.24.2
 - name: kubernetes-sigs/krew@v0.4.5
-- name: brumhard/krewfile@v0.6.3
+- name: brumhard/krewfile@v0.7.0
 - name: derailed/k9s@v0.50.16
-- name: argoproj/argo-cd@v3.2.2
+- name: argoproj/argo-cd@v3.2.3
 - name: kubernetes-sigs/kustomize@kustomize/v5.8.0
 - name: pre-commit/pre-commit@v4.5.1
 - name: linkerd/linkerd2@edge-25.12.3
 - name: smallstep/cli@v0.29.0
 - name: argoproj/argo-rollouts@v1.8.3
-- name: nektos/act@v0.2.83
-- name: astral-sh/uv@0.9.18
+- name: nektos/act@v0.2.84
+- name: astral-sh/uv@0.9.22
 - name: dandavison/delta@0.18.2
