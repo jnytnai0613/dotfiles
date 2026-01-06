@@ -54,5 +54,6 @@
     "[ruby]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "Shopify.ruby-lsp"
-    }
+    },
+    "chat.viewSessions.orientation": "stacked"
 }
